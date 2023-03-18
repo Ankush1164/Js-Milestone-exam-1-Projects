@@ -1,0 +1,29 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: purple;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+.container{
+position: relative;
+height: 500px;
+width: 500px;
+background-color: green;
+border-radius: 10px;
+cursor: pointer;
+overflow: hidden;
+}
+.container img{
+    border-radius: 100%;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translate(-50% , -50%);
+}

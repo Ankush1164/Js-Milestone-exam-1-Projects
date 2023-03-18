@@ -1,0 +1,65 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Mixer</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    div {
+      margin: auto;
+      width: 400px;
+    }
+    div input {
+      padding: 5px;
+      outline: none;
+    }
+    h2 {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .btn {
+      display: flex;
+      height: 80px;
+      align-items: center;
+      justify-content: center;
+      width: 300px;
+      margin: auto;
+    }
+    .btn button {
+      padding: 8px 20px 8px 20px;
+      border-radius: 5px;
+      border: 1px solid red;
+      cursor: pointer;
+    }
+    p {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  </style>
+  <body>
+    <h1>Color Mixer with Switch statement</h1>
+    <p>Use three color (red, blue , yellow)</p>
+    <div>
+      <input type="text" id="inpt1" />
+      <span>+</span>
+      <input type="text" id="inpt2" />
+
+    </div>
+    <div class="btn">
+      <button id="btn">Mix the color</button>
+    </div>
+
+    <h2 id="outpt"></h2>
+    <script src="./script.js"></script>
+  </body>
+</html>

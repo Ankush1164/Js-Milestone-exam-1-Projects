@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Account</title>
+    <link rel="stylesheet" href="./style.css">
+     <!-- Favicon Icon -->
+     <link rel="shortcut icon" href="./faviconicon.jpg" type="image/x-icon">
+
+     <!-- link Google Fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Itim&family=Julee&family=Poppins&family=Teko&family=Tilt+Neon&family=Ubuntu&display=swap" rel="stylesheet">
+</head>
+<body class="bdy2">
+    <header class="user_profilehead">
+        <div class="img_sec">
+
+        </div>
+        <div class="name_Sec">
+            <h2 id="username"></h2>
+            <h4 id="accountno">Account No:</h4>
+        </div>
+        <div class="btn_Sec">
+            <a href="./index.html"><button>Sign Out</button></a>
+        </div>
+    </header>
+    <section>
+        <div class="left">
+            <input type="text">
+            <input type="text">
+        </div>
+        <div class="right">
+            <div class="Amount">
+                <h3>Total Amount Available.</h3>
+                <h1>₹ 18,300 /-</h1>
+            </div>
+        </div>
+    </section>
+    <script>
+        let userName = document.getElementById("username");
+    userName.innerText= localStorage.getItem("uname");
+
+    let acountno = document.getElementById("accountno");
+    acountno.innerText= localStorage.getItem("acn")
+    </script>
+</body>
+</html>

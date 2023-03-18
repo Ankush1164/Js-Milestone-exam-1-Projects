@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&family=Julee&family=Poppins&family=Teko&family=Tilt+Neon&family=Ubuntu&display=swap" rel="stylesheet">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: 'Tilt Neon', cursive;
+    }
+    h1{
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
+    .images{
+        width: 600px;
+        margin: auto;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+    }
+     .images img{
+        height: 500px;
+        width: 400px;
+     }
+    .buttons{
+        margin: auto;
+        width: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        gap: 20px;
+    }
+    .buttons button{
+        padding: 5px 20px 5px 20px ;
+        cursor: pointer;
+    }
+    .buttons button:active{
+        background-color: black;
+        color: #fff;
+    }
+</style>
+<body>
+    <h1>Image Slider</h1>
+    <div class="images">
+        <img src="https://images.pexels.com/photos/12094265/pexels-photo-12094265.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="" srcset="" id="images">
+    </div>
+    <div class="buttons">
+        <button id="previousbtn">Prev</button>
+        <button id="nextbtn">Next</button>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

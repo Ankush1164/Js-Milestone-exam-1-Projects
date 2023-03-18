@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Percentage Calculator</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <main>
+    <div class="conatiner">
+        <h2>Discount Calculator</h1>
+        <input type="text" placeholder="Orignal Price" autofocus id="inpt">
+        <input type="text" placeholder="Discount Price" id="inpt2">
+        <button id="btn">Click To calculate</button>
+        <div class="resut">
+            <h2 id="output"></h2>
+        </div>
+        
+    </div>
+</main>
+    <script>
+        const btn = document.getElementById("btn")
+        btn.addEventListener("click" , ()=>{
+            let inputs = document.getElementById("inpt").value;
+            let inputs2 = document.getElementById("inpt2").value;
+            let output = document.getElementById("output");
+            let firstValue = inputs;
+            let secondValue = inputs2
+            let finalResult = inputs2/inputs*100;
+            output.innerText = finalResult + "%"
+            if(inputs2 > inputs){
+                window.open("https://media.tenor.com/0wytDwUcRRoAAAAM/bhosdike-madarchod.gif")
+                output.innerText = " "
+            }
+            else{
+                
+            }
+            
+        })
+        
+    </script>
+</body>
+</html>

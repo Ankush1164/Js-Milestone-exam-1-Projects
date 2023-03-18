@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highest Marks</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        background-color: azure;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+    }
+    body .marks_conatiner{
+        background-color: lightblue;
+        width: 300px;
+        height: 200px;
+        box-shadow: 0px 0px 8px black;
+        border-radius: 10px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 50px;
+    }
+    .marks_conatiner button{
+        padding: 5px 20px 5px 20px;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <div class="marks_conatiner">
+        <h4>[210,230,360,180,425,498,160]</h4>
+        <h2 id="h2">Get marks</h2>
+        <button id="btn">Click To get Highest mark</button>
+    </div>
+</body>
+<script>
+const button = document.getElementById("btn");
+let output = document.getElementById("h2");
+button.addEventListener("click", ()=>{
+    let arr = [210,230,360,180,425,498,160];
+    let maxValue = arr[0]
+    for( let i = 0; i<arr.length; i++){
+        if(arr[i]>maxValue){
+            maxValue = arr[i]
+        }
+    }
+    output.innerText = maxValue
+})
+</script>
+</html>
