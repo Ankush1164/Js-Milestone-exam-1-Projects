@@ -257,7 +257,7 @@ section .right{
 }
 section .right .Amount{
 height: 200px;
-background-color: antiquewhite;
+background-image: linear-gradient(to right , lightseagreen, lightblue);
 width: 100%;
 display: flex;
 flex-direction: column;

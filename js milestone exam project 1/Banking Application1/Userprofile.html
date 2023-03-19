@@ -30,15 +30,18 @@
     <section>
         <div class="left">
             <label for="">Add Amount</label>
-            <input type="text">
+            <input type="text" id="addAmount">
+            <button id="addbtn">Add </button>
             <label for="">Widthdrawl Amount</label>
-            <input type="text">
-            <button>Add </button>
+            <input type="text" id="withdrawlAmount">
+            <button id="withdrawlbtn">Widthdrawl</button>
         </div>
         <div class="right">
             <div class="Amount">
                 <h3>Total Amount Available.</h3>
-                <h1>₹ 18,300 /-</h1>
+                <h1>₹ 
+                    <span id="userAmount">0</span>/-
+                </h1>
             </div>
         </div>
     </section>
@@ -48,6 +51,55 @@
 
     let acountno = document.getElementById("accountno");
     acountno.innerText= localStorage.getItem("acn")
-    </script>
+
+
+    // let btn1 = document.getElementById("addbtn");
+    // let btn2 = document.getElementById("withdrawlbtn");
+    // btn1.addEventListener("click" , ()=>{
+    //     let userAmount = document.getElementById("userAmount")
+    //     let addValue = document.getElementById("addAmount").value;
+    //     let finalAddAmount = Number(userAmount.innerText) + Number(addValue);
+    //     userAmount.innerText = "₹" + " " + finalAddAmount + "/-";
+
+       
+    // })
+    // setTimeout(() => {
+    //         alert("Your Amount was Added Succesfully. Avaliable Account Balance is " + finalAddAmount )
+    //     }, 1000);
+    // btn2.addEventListener("click", ()=>{
+    //     let userAmount = document.getElementById("userAmount").innerText
+    //     let widthdrawlValue = document.getElementById("withdrawlAmount").value;
+    //     let finalSubAmount = Number(userAmount) - Number(widthdrawlValue);
+    //     console.log(userAmount);
+    //     console.log(widthdrawlValue);
+    //     document.getElementById("userAmount").innerText = finalSubAmount;
+    // })
+
+    // Adding And Widthrawl Amount
+    let btn1 = document.getElementById("addbtn");
+    let btn2 = document.getElementById("withdrawlbtn");
+    btn1.addEventListener("click" , ()=>{
+        let userAmount = document.getElementById("userAmount").innerText
+        let addValue = document.getElementById("addAmount").value;
+        let finalAddAmount = Number(userAmount) + Number(addValue);
+        document.getElementById("userAmount").innerText = finalAddAmount
+        setTimeout(() => {
+            alert("Amount Added Succesfully. Avaliable Amount :" + finalAddAmount)
+        }, 0.500);
+       
+    })
+    btn2.addEventListener("click", ()=>{
+        let userAmount = document.getElementById("userAmount").innerText
+        let widthdrawlValue = document.getElementById("withdrawlAmount").value;
+        let finalSubAmount = Number(userAmount) - Number(widthdrawlValue);
+        document.getElementById("userAmount").innerText = finalSubAmount
+        setTimeout(() => {
+            alert("Amount Widthrawl Succesfully. Avaliable Amount :" + " " + finalSubAmount)
+        }, 0.500);
+        if(userAmount < 100){
+            window.open("https://media.tenor.com/2MsDloxNtIwAAAAM/monkey-funny.gif")
+        }
+    })
+</script>
 </body>
 </html>

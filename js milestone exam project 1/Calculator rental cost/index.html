@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate Rental Cost</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- Google fonts Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+   <div class="conatiner">
+    <div class="input_holder">
+        <h3>Check rooms prices (in Rs)</h1>
+        <div class="rooms">
+            <input type="text" placeholder="Enter Days">
+            <div class="rooms_name">
+                <p id="output">Economy</p>
+            </div>
+            <button onclick="economy()">Check</button>
+        </div>
+        <div class="rooms">
+            <input type="text" placeholder="Enter Days">
+            <div class="rooms_name">
+                <p id="output1">Midsize</p>
+            </div>
+            <button onclick="midsize()">Check</button>
+        </div>
+        <div class="rooms">
+            <input type="text" placeholder="Enter Days">
+            <div class="rooms_name">
+                <p id="output2">Luxury</p>
+            </div>
+            <button onclick="luxury()">Check</button>
+        </div>
+    </div>
+   </div> 
+   <script src="./script.js"></script>
+</body>
+</html>
